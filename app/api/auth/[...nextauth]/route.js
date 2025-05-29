@@ -33,6 +33,9 @@ const authOptions = NextAuth({
         //     from: 'NextAuth.js <no-reply@example.com>'
         // }),
     ],
+
+    secret: process.env.NEXTAUTH_SECRET,
+
     callbacks: {
         async signIn({ user, account, profile, email, credentials }) {
             if (account.provider == "github") {
