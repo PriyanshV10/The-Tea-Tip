@@ -3,7 +3,7 @@ import { React, useEffect } from 'react'
 import { useSession, signIn, signOut } from 'next-auth/react'
 import { useRouter } from 'next/navigation'
 
-const login = () => {
+const Login = () => {
 
     const router = useRouter()
     const { data: session, status } = useSession()
@@ -68,7 +68,7 @@ const login = () => {
     )
 }
 
-export default login
+export default Login
 
 // export const metadata = {
 //     title: "Login - The Tea Tip",
